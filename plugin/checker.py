@@ -6,8 +6,8 @@ from typing import List, Tuple, Generator
 
 
 class KwargsErrorCodes(enum.Enum):
-    FUNCTION_KWARG_ONLY = "EKO001"
-    CLASS_METHOD_KWARG_ONLY = "EKO002"
+    FUNCTION_KWARG_ONLY = "EKW001"
+    CLASS_METHOD_KWARG_ONLY = "EKW002"
 
 
 class FunctionVisitor(ast.NodeVisitor):
