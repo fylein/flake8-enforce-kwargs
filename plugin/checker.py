@@ -64,7 +64,7 @@ class FunctionVisitor(ast.NodeVisitor):
 
 
 class Plugin:
-    name = "kwargs_enforcer"
+    name = "enforce_kwargs"
     version = "0.1.0"
 
     def __init__(self, tree: ast.AST, filename: str) -> None:

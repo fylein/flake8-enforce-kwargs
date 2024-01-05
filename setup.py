@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="kwargs-enforcer",
+    name="enforce-kwargs",
     version=Plugin.version,
     author="Siva Narayanan",
     author_email="siva@fylehq.com",
@@ -15,7 +15,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     keywords=["flake8", "kwargs", "python", "enforcer", "arguments", "parameters"],
-    url="https://github.com/fylein/flake8-kwargs-enforcer",
+    url="https://github.com/fylein/flake8-enforce-kwargs",
     packages=find_packages(
         include=["plugin*"]
     ),
