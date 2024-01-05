@@ -21,3 +21,12 @@ class TestPlugin:
         plugin = Plugin(tree=tree, filename=self.file_name)
         for lineno, col_offset, error_message, instance in plugin.run():
             assert error_message == "EKW002 Class method `test_function` should only accept keyword arguments."
+
+        code = """class TestClass:
+                    @classmethod
+                    def test_function(cls, mock_arg):pass
+        """
+        tree = ast.parse(code)
+        plugin = Plugin(tree=tree, filename=self.file_name)
+        for lineno, col_offset, error_message, instance in plugin.run():
+            assert error_message == "EKW002 Class method `test_function` should only accept keyword arguments."
