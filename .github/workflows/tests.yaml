@@ -11,7 +11,11 @@ jobs:
     name: Running pytest
     runs-on: ubuntu-latest
     steps:
-      - name: run pytest
+      - name: Install Requirements
+        run: |
+          python3 -m pip install -r requirements.txt
+
+      - name: Run pytest
         run: |
           set -o pipefail
           pytest | tee pytest_coverage.txt
