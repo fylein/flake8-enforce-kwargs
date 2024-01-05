@@ -9,7 +9,7 @@ setup(
     name="kwargs-enforcer",
     version=Plugin.version,
     author="Siva Narayanan",
-    author_email="siva@fyle.in",
+    author_email="siva@fylehq.com",
     description="Flake8 plugin for enforcing kwargs only argument definition.",
     license="MIT",
     long_description=long_description,
