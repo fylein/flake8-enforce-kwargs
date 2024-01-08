@@ -6,7 +6,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
-    name="enforce-kwargs",
+    name="flake8-enforce-kwargs",
     version=Plugin.version,
     author="Siva Narayanan",
     author_email="siva@fylehq.com",
