@@ -1,10 +1,20 @@
 import ast
 from email import message
+
+import pytest
 from plugin.checker import Plugin
 
 
 class TestPlugin:
     file_name: str = "mock_filename"
+
+    def test_when_kwargs_present_in_function(self):
+        code = """def test_function(*, mock_arg):pass"""
+        tree = ast.parse(code)
+        plugin = Plugin(tree=tree, filename=self.file_name)
+        plugin_run = plugin.run()
+        with pytest.raises(StopIteration):
+            next(plugin_run)
 
     def test_when_kwargs_not_present_in_function(self):
         code = """def test_function(mock_arg):pass"""
