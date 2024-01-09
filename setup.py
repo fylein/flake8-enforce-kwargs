@@ -1,5 +1,5 @@
 from setuptools import setup, find_packages
-from plugin.checker import Plugin
+from enforce_kwargs.checker import Plugin
 
 
 with open("README.md", "r") as f:
@@ -17,14 +17,14 @@ setup(
     keywords=["flake8", "kwargs", "python", "enforcer", "arguments", "parameters"],
     url="https://github.com/fylein/flake8-enforce-kwargs",
     packages=find_packages(
-        include=["plugin*"]
+        include=["enforce_kwargs*"]
     ),
     install_requires=[
         "flake8==7.0.0"
     ],
     entry_points={
         "flake8.extension": [
-            "EKW = plugin.checker:Plugin",
+            "EKW = enforce_kwargs.checker:Plugin",
         ],
     },
     classifiers=[

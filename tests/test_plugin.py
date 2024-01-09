@@ -1,8 +1,7 @@
 import ast
-from email import message
 
 import pytest
-from plugin.checker import Plugin
+from enforce_kwargs.checker import Plugin
 
 
 class TestPlugin:
