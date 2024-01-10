@@ -39,8 +39,8 @@ Example configuration:
 
 
 ```[flake8]
-select = EKW
-exclude = __init__.py,setup.py
+per-file-ignores =
+    utils.py:EKW002,EKW001
 ````
 Rules
 -----
